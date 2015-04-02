@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d76f48bf5844fa4b164f6e791318bec" Name="Diagram1">
+        <EntityTypeShape EntityType="InventoryModel.Customer" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Part" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.PurchaseOrder" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.PurchaseOrderPart" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Receipt" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.SalesOrder" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.SalesOrderPart" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.SalesReturn" Width="1.5" PointX="9.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Shipment" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.ShipmentPart" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Spoilage" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Vendor" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="InventoryModel.FK_SalesOrder_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_PurchaseOrderPart_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_SalesOrderPart_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Spoilage_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_PurchaseOrder_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_PurchaseOrderPart_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Receipt_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_SalesOrderPart_SalesOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Shipment_Shipment" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Return_ShipmentPart" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_ShipmentPart_Shipment" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
