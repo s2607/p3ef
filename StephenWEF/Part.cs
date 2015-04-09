@@ -23,7 +23,7 @@ namespace EntityFrameworkInventory
     
         public int PartId { get; set; }
         public string Name { get; set; }
-        public int Count { get; set; }
+        public int Quantity { get; set; }
         public Nullable<decimal> CurrentValue { get; set; }
         public Nullable<System.DateTime> TerminationDate { get; set; }
         public Nullable<decimal> Price { get; set; }

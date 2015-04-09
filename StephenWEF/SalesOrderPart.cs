@@ -15,7 +15,7 @@ namespace EntityFrameworkInventory
     public partial class SalesOrderPart
     {
         public int SalesOrderPartId { get; set; }
-        public int OrderNumber { get; set; }
+        public int SalesOrderNumber { get; set; }
         public int PartID { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }

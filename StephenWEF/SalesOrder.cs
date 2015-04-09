@@ -20,7 +20,7 @@ namespace EntityFrameworkInventory
             this.Shipments = new HashSet<Shipment>();
         }
     
-        public int OrderNumber { get; set; }
+        public int SalesOrderNumber { get; set; }
         public Nullable<int> CustomerId { get; set; }
         public System.DateTime OrderDate { get; set; }
         public Nullable<decimal> OrderTotal { get; set; }
