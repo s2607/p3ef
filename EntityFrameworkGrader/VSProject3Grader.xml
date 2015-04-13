@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProjectGrader>
+    <Name>ITP-236 Inventory Entity Framework Project</Name>
+    <Topics>
+        <Topic Name="POCOs">
+            <Class>
+                <Test Name="Customer" Value="1" />
+                <Test Name="Part" Value="1" />
+                <Test Name="PurchaseOrder" Value="1" />
+                <Test Name="PurchaseOrder" Value="1" />
+                <Test Name="Receipt" Value="1" />
+                <Test Name="SalesOrder" Value="1" />
+                <Test Name="SalesOrderPart" Value="1" />
+                <Test Name="SalesReturn" Value="1" />
+                <Test Name="Shipment" Value="1" />
+                <Test Name="ShipmentPart" Value="1" />
+                <Test Name="Spoilage" Value="1" />
+                <Test Name="Vendor" Value="1" />
+            </Class>
+        </Topic>
+        <Topic Name="Repositories">
+            <Class>
+                <Test Name="CustomerRepository" Value="1" />
+                <Test Name="PartRepository" Value="1" />
+                <Test Name="PurchaseOrderRepository" Value="1" />
+                <Test Name="PurchaseOrderRepository" Value="1" />
+                <Test Name="ReceiptRepository" Value="1" />
+                <Test Name="SalesOrderRepository" Value="1" />
+                <Test Name="SalesOrderPartRepository" Value="1" />
+                <Test Name="SalesReturnRepository" Value="1" />
+                <Test Name="ShipmentRepository" Value="1" />
+                <Test Name="ShipmentPartRepository" Value="1" />
+                <Test Name="SpoilageRepository" Value="1" />
+                <Test Name="VendorRepository" Value="1" />
+            </Class>
+        </Topic>
+        <Topic Name="Customer" >
+            <Constants>
+                <Test Name="StudentName" DataType="String" Value="1" />
+            </Constants>
+            <Properties>
+                <Test Name="TotalSales" DataType="Decimal" ReadWrite="ReadOnly" Value="20" Method="TestCustomerTotalSales" />
+            </Properties>
+            <Methods>
+                <Test Name="GetCustomersWithOrders" DataType="List`1" Value="20" Method="TestGetCustomersWithOrders"  >
+                    <Parameters>
+                        <!--<Parameter Name="PayDate" DataType="DateTime" />-->
+                    </Parameters>
+                </Test>
+                <Test Name="GetLargestCustomer" DataType="Customer" Value="20" Method="TestGetLargestCustomer" />
+                <Test Name="GetCustomersByOrderSizeDescending" DataType="List`1" Value="20" Method="TestGetCustomersByOrderSizeDescending" >
+                    <Parameters>
+                        
+                    </Parameters>
+                </Test>
+            </Methods>
+        </Topic>
+        <Topic Name="Vendor" >
+            <Properties>
+                <Test Name="TotalPurchases" DataType="Decimal" ReadWrite="ReadOnly" Value="20" Method="TestVendorTotalPurchases" />
+                <Test Name="GetAllParts" DataType="List`1" Generic="Part" ReadWrite="ReadOnly" Value="20" Method="TestGetAllVendorParts" />
+            </Properties>
+        </Topic>
+        <Topic Name="Part" >
+            <Methods>
+                <Test Name="GetPartsWithoutSpoilages" DataType="List`1" Value="20" Method="TestGetPartsWithoutSpoilages" />
+                <Test Name="GetHighestValue" DataType="Part" Value="20" Method="TestGetHighestValue" />
+                <Test Name="GetPartDictionary" DataType="Dictionary`2" Value="20" Method="TestGetPartDictionary" />
+                <Test Name="GetAllParts" DataType="List`1" Value="20" Method="TestGetDistinctPartsInPurchaseOrderParts" >
+                    <Parameters>
+                        <Parameter Name="PurchaseOrder" DataType="PurchaseOrder" />
+                    </Parameters>
+                </Test>
+            </Methods>
+        </Topic>
+
+    </Topics>
+</ProjectGrader>
